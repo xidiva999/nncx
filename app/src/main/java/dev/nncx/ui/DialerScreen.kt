@@ -152,29 +152,42 @@ fun DialerScreen(onClose: () -> Unit) {
                 return@Column
             }
 
-            if (!keypad) Box(
+            if (!keypad) Row(
                 Modifier
                     .fillMaxWidth()
                     .padding(horizontal = t.gutter)
                     .clip(RoundedCornerShape(t.corner))
                     .background(t.surface)
-                    .padding(horizontal = 16.dp, vertical = 14.dp)
+                    .padding(start = 16.dp, end = 6.dp, top = 14.dp, bottom = 14.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
-                BasicTextField(
-                    value = query,
-                    onValueChange = { query = it },
-                    singleLine = true,
-                    textStyle = TextStyle(
-                        color = t.onSurface, fontSize = 16.sp,
-                        fontFamily = if (t.isXray) t.dataFamily else t.uiFamily,
-                    ),
-                    cursorBrush = SolidColor(t.accentFull),
-                    modifier = Modifier.fillMaxWidth(),
-                    decorationBox = { inner ->
-                        if (query.isEmpty()) Txt("Name or number", t.onSurfaceDim, 16.sp, false)
-                        inner()
-                    },
-                )
+                Box(Modifier.weight(1f)) {
+                    BasicTextField(
+                        value = query,
+                        onValueChange = { query = it },
+                        singleLine = true,
+                        textStyle = TextStyle(
+                            color = t.onSurface, fontSize = 16.sp,
+                            fontFamily = if (t.isXray) t.dataFamily else t.uiFamily,
+                        ),
+                        cursorBrush = SolidColor(t.accentFull),
+                        modifier = Modifier.fillMaxWidth(),
+                        decorationBox = { inner ->
+                            if (query.isEmpty()) Txt("Name or number", t.onSurfaceDim, 16.sp, false)
+                            inner()
+                        },
+                    )
+                }
+
+                // Same rule as the home search: nothing to clear, nothing to show.
+                if (query.isNotEmpty()) {
+                    Box(
+                        Modifier
+                            .size(34.dp)
+                            .pointerInput("clear-people") { detectTapGestures { query = "" } },
+                        contentAlignment = Alignment.Center,
+                    ) { Txt("\u2715", t.onSurfaceDim, 14.sp, true) }
+                }
             }
 
             if (keypad) {
