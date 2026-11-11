@@ -145,7 +145,9 @@ Two walls, hit and verified rather than guessed:
   overview down with it system-wide. Re-launching an app restores its session,
   which covers most of the gap.
 
-## Credits
+## License
+
+MIT — see [LICENSE](LICENSE). Clone it, change it, ship your own.
 
 Handset icon from [Lucide](https://lucide.dev), ISC licensed.
 
