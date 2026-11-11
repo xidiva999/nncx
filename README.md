@@ -10,6 +10,8 @@ launcher cannot.
 
 The name is from a blog called *Non Nerdy Coder*. The `x` is the mechanic.
 
+![NNCx in normal mode on an open foldable: clock and date on the left, folders with live counts in the middle, ranked apps on the right, and the pinned dock on the outer rail](docs/open.png)
+
 ## The x
 
 Normal mode looks like an ordinary phone. Paper white, 28dp corners, a clock.
