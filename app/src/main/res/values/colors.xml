@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The launcher's own surface while it boots, and the icon's ground. -->
+    <color name="launch_bg">#F7F7F5</color>
+    <color name="icon_bg">#502B5D</color>
+</resources>

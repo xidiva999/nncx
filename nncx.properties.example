@@ -1,0 +1,20 @@
+# Copy this to nncx.local.properties and make it yours. That file is
+# gitignored, so your dock and your employer's package names stay off GitHub.
+#
+#   cp nncx.properties.example nncx.local.properties
+
+# Any hex. NNCx keeps your hue and grounds the lightness so the colour stays
+# legible against both poles — paper in normal mode, near-black in x-ray.
+nncx.accent=#7B2CBF
+
+# Which packages count as Work. Comma-separated prefixes, no spaces.
+# An app also lands in Work if it is signed with the same key as this build.
+nncx.work.prefixes=com.example
+
+# The dock is the one layer NNCx does not rank for you: your absolute
+# necessary few, in your order. Everything else is ranked by use.
+nncx.dock=com.android.chrome,com.google.android.gm
+nncx.dock.size=5
+
+# Which thumb. Matters on a foldable, where the dock rides one edge.
+nncx.dock.side=right

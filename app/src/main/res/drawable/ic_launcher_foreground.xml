@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The NNCx mark, at icon scale.
+
+  One stroke runs the full diagonal; the other breaks at the crossing and
+  passes behind it. Same construction as the mark drawn on the x band, so the
+  icon on the home screen and the bar at the bottom are the same object.
+
+  108x108 viewport, drawn inside the 66x66 safe zone so no launcher mask
+  clips it.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- over -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:pathData="M30,30 L78,78" />
+
+    <!-- under, broken at the crossing -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:pathData="M78,30 L62,46" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:pathData="M46,62 L30,78" />
+</vector>

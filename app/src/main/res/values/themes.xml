@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NNCx" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <!-- NNCx paints its own surface. No wallpaper, no translucency. -->
+        <item name="android:windowShowWallpaper">false</item>
+        <item name="android:windowBackground">@color/launch_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">always</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>
